@@ -1,6 +1,11 @@
 ---
-import logoSB from "../assets/svg/logoSB.svg?raw";
+import { Image } from 'astro:assets';
+import logoSB from "../assets/svg/logoSB.svg";
 
+// want to scale to the parent container
+// predefined sizes
+// include styling options, CSS? add a class via props?
+// const {width, height} = Astro.props;
 ---
 
-<Fragment set:html={logoSB} />
+<Image src={logoSB} alt="stimulans-balans logo" format='svg' />
