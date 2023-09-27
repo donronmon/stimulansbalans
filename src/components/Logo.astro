@@ -1,6 +1,5 @@
 ---
-import { Image } from 'astro:assets';
-import logoSB from "../assets/svg/logoSB.svg";
+import logoSB from "../assets/svg/logoSB.svg?url";
 
 // want to scale to the parent container
 // predefined sizes
@@ -8,4 +7,6 @@ import logoSB from "../assets/svg/logoSB.svg";
 // const {width, height} = Astro.props;
 ---
 
-<Image src={logoSB} alt="stimulans-balans logo" format='svg' />
+<svg>
+    <use xlink:href={logoSB} />
+</svg>
