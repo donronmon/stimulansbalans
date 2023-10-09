@@ -1,0 +1,22 @@
+---
+// taken from astrowind
+import Layout from './PageLayout.astro';
+
+export interface Props {
+  frontmatter: {
+    title?: string
+  }
+}
+
+const { frontmatter } = Astro.props;
+
+---
+
+<Layout>
+  <section>
+    <h1>{frontmatter.title}</h1>
+    <div>
+      <slot />
+    </div>
+  </section>
+</Layout>
